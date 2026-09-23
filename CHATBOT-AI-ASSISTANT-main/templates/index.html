@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarvis AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <div class="jarvis-icon">
+                    <div class="jarvis-circle" id="jarvis-circle">
+                        <div class="jarvis-inner-circle"></div>
+                    </div>
+                </div>
+                <h1>JARVIS</h1>
+            </div>
+            <div class="subtitle">AI Assistant</div>
+        </div>
+        
+        <div class="chat-container">
+            <div class="chat-box" id="chat-box">
+                <div class="message assistant">
+                    <div class="message-content">Welcome to Jarvis AI Assistant. How can I help you today?</div>
+                </div>
+            </div>
+            
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Type a message..." autocomplete="off">
+                <button id="mic-button" title="Voice Input">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <button id="send-button" title="Send Message">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            
+            <div class="status-bar">
+                <span id="status">Ready</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html> 
